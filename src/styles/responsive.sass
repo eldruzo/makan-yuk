@@ -1,0 +1,125 @@
+@media screen and (min-width: 769px) and (max-width: 1200px)
+  app-nav
+    #nav-menu
+      a
+        padding: 23px
+
+        &:hover
+          background-color: rgba(204, 84, 32, 0.644)
+  main
+    .content
+      .content-main
+        grid-template-columns: repeat(3, 1fr)
+        .post
+          .post-thumbnail
+            img
+              height: 270px
+          .post-content
+            h2
+              font-size: 16px
+        
+        .post-skeleton
+          .post-skeleton-thumbnail
+            height: 270px
+          
+          .post-skeleton-content
+            .post-skeleton-title
+              height: 35px
+
+@media screen and (min-width: 769px)
+  app-nav
+    padding: 0 0 0 20px
+
+    #nav-menu
+      a
+        &:hover
+          background-color: rgba(204, 84, 32, 0.644)
+
+@media screen and (max-width: 768px)
+  app-nav
+    #app-name
+      font-size: 29px
+      padding: 0 20%
+    #nav-menu
+      width: 200px
+      position: absolute
+      transform: translate(-230px, 0)
+      transition: transform 0.3s ease-in-out
+      background-color: rgb(252, 252, 252)
+      color: black
+      font-size: 16px
+      margin: 0
+      height: 100%
+      padding: 0
+      z-index: 3
+      &.open
+        transform: translate(-30px, 0)
+      li
+        display: block
+        text-align: left
+        padding: 15px 20px 15px 0
+        li:active
+          background-color: rgba(0, 0, 0, 0.233)
+        .material-icons
+          display: inline-block
+          margin-right: 20px
+        a
+          color: black
+          text-align: left
+    #hamburger
+      display: block
+      font-size: 20px
+      padding-top: 5px
+      button
+        text-decoration: none
+        color: white
+        padding: 16px
+        margin: 0 
+        background: Transparent
+        border: 0
+  .hero-inner
+    min-height: 300px
+    .hero-content
+      border-radius: 0
+      width: 100%
+  main
+    .content
+      .content-main
+        grid-template-columns: repeat(2, 1fr)
+  .detail, .menu, .reviews
+    grid-template-columns: 1fr
+  .menu
+    font-size: 12pt  
+
+@media screen and (max-width: 580px)
+  main
+    .content
+      .content-main
+        grid-template-columns: 1fr
+        .post
+          .post-thumbnail
+            img
+              height: 300px
+          .post-content
+            h2
+              font-size: 24px
+        .post-skeleton
+          .post-skeleton-thumbnail
+            height: 300px
+          .post-skeleton-content
+            .post-skeleton-title
+              height: 45px
+  .hero-inner
+    min-height: 250px
+    background-image: url('/images/heros/hero-image_4-mobile.jpg') 
+  .handler
+    .image-handler
+      img
+        width: 40%
+    .caption-handler
+      font-size: 13px
+
+@media screen and (max-width: 1200px)
+  app-search 
+    input
+      width: 90%

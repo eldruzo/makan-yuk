@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons&display=swap');
+
+body, html
+  margin: 0
+  padding: 0
+  display: flex
+  flex-direction: column  
+  height: 100%
+  font-family: 'Roboto', 'sans-serif'
+  src: local('sans-serif')
+  font-size: 12pt
+  background-image: url('/images/styles/background-pattern.png')
+  background-attachment: fixed
+  scroll-behavior: smooth
+#skip-content
+  position: absolute
+  top: 10px
+  left: -300px
+  padding: 7px
+  background-color: rgb(117, 40, 6)
+  text-decoration: none
+  color: white
+  font-size: 24px
+  &:focus
+    left: 10px
+app-nav, main
+  margin-bottom: 10px
+  padding: 0 20px
+.material-icons
+  vertical-align: middle
+.button
+  padding: 15px 30px
+  text-decoration: none
+  color: white
+  font-size: 16px
+  border-radius: 10px
+  border: 0
+  text-align: center
+.button-orange
+  background-color: #cc4912
+  &:hover
+      background-color: #c26740e5
+.button-primary
+  background-color: #147ca8
+  &:hover
+      background-color: #107dac
+.button-danger
+  background-color: #cf4343
+  &:hover
+      background-color: #ff5252
+app-nav
+  background-color: #F55F20
+  display: grid
+  grid-template-columns: 20% 80%
+  height: 64px
+  color: white
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.281)
+  #hamburger
+    display: none
+  #app-name
+    font-size: 32px
+    line-height: 64px
+  #nav-menu
+    text-align: right
+    padding-top: 7px
+    li
+      display: inline-block
+    .material-icons
+      display: none
+    a
+      font-size: 15px
+      color: white
+      text-decoration: none
+      padding: 23px 30px
+      transition: 0.3s
+.hero-inner
+  display: flex
+  align-items: center
+  min-height: 400px
+  width: 100%
+  text-align: center
+  background-image: url('/images/heros/hero-image_4.jpg')
+  background-position: center
+  background-color:#e2e2e2
+  background-size: cover
+  .hero-content
+    margin: 0 auto
+    padding: 0 20px
+    background-color: rgba(0, 0, 0, 0.5)
+    border-radius: 10px
+    .hero-title
+      color: #fff
+      font-weight: 500
+      font-size: 36px
+    .hero-tagline
+      color: #fff
+      margin-top: 16px
+      font-size: 18px
+      font-weight: 300
+main
+  flex: 1 0 auto
+  margin-bottom: 20px
+  .content
+    .content-title
+      color: white
+      background-color: rgba(0, 0, 0, 0.5)
+      text-align: center
+      padding: 25px 20px
+      font-size: 20px
+      font-weight: 500
+    .content-main
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      gap: 20px 
+      .post
+        .post-thumbnail
+          position: relative
+          overflow: hidden        
+          img
+            height: 300px
+            object-fit: cover
+            border-radius: 15px 15px 0 0
+            background-color: #e2e2e2
+            transition: transform .2s
+            &:hover
+              transform: scale(1.1)
+          span
+            position: absolute
+            top: 20px
+            left: 0
+            background-color: rgb(0, 0, 0)
+            font-size: 20px
+            padding: 10px
+            text-align: center
+            color: white
+            .material-icons
+              font-size: 16px
+        .post-content
+          padding: 30px
+          border-radius: 0 0 15px 15px
+          font-size: 14px
+          margin-top: -15px
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+          background-color: white
+          height: 100%
+          h2
+            .material-icons
+              font-size: 20px
+          #description
+            overflow: hidden
+            text-overflow: ellipsis
+            display: -webkit-box
+            -webkit-line-clamp: 5
+            -webkit-box-orient: vertical
+          p
+            margin-top: 30px
+            a
+              text-decoration: none
+              color: white
+              padding: 10px 44px
+              background-color: #005b96
+              font-size: 14pt
+              border-radius: 10px
+              transition: 0.3s
+              .material-icons
+                color: white
+              &:hover
+                background-color:  #03396c 
+      .post-skeleton
+        .post-skeleton-thumbnail
+          height: 300px
+          width: 100%
+          border-radius: 15px 15px 0 0
+          background-color: #e2e2e2      
+        .post-skeleton-content
+          background-color: #ffffff
+          padding: 30px
+          border-radius: 0 0 15px 15px
+          margin-top: -15px
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+          height: 100%
+          div
+            margin-bottom: 20px         
+          .post-skeleton-title
+            width: 70%
+            height: 25px
+            background-color: #e2e2e2
+          .post-skeleton-description
+            height: 100%
+            height: 150px
+            background-color: #e2e2e2     
+          .post-skeleton-button
+            width: 50%
+            height: 40px
+            background-color: #e2e2e2
+            margin: 0 auto 
+    .content-button
+      text-align: center
+      margin: 30px 0
+footer
+  flex-shrink: 0
+  background-color: #cc4912
+  height: 100%
+  padding-top: 10px
+  p
+    text-align: center
+    font-size: 15px
+    color: white
+app-search 
+  text-align: center
+  label
+    display: none
+  input
+    width: 50%
+    margin: 5px 0 15px 0
+    font-size: 14pt
+    height: 40px
+    border-radius: 5px
+    border: 3px solid rgb(194, 194, 194)
+    padding: 0 15px
+    &:focus
+      border: 3px solid rgb(11, 110, 175)
+.detail
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  .detail-image
+    display: flex
+    img
+      object-fit: cover   
+      &:hover
+        transition:  width 2s
+  .skeleton-detail-image
+    display: flex
+    height: 540px
+    background-color: #e2e2e2  
+  .detail-info
+    background-color: white
+    padding: 0 30px
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+    h2
+      font-size: 20pt
+      .material-icons
+        color: black
+        vertical-align: top
+        font-size: 24pt
+    p
+      font-size: 12pt
+      line-height: 30px
+      margin-bottom: 50px
+      .material-icons
+        vertical-align: middle 
+    .skeleton-detail-title
+      margin-top: 30px
+      width: 80%
+      height: 50px
+      background-color: #e2e2e2
+    .skeleton-detail-location, .skeleton-detail-categorie
+      width: 50%
+      height: 30px
+      background-color: #e2e2e2
+    .skeleton-detail-description
+      width: 100%
+      height: 300px
+      background-color: #e2e2e2
+    div
+      margin-bottom: 20px
+.menu
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  font-size: 14pt
+  gap: 10px
+  div
+    background-color: white
+    padding: 30px
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+    .card-title
+      text-align: center
+      margin: 0 auto
+      box-shadow: 0 0 
+      padding: 0
+    ul
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 0 20px   
+    li
+      margin-bottom: 10px
+    div
+      padding: 0
+      box-shadow: none
+    .skeleton-menu-title
+      margin: 0 auto
+      height: 40px
+      width: 50%
+      background-color: #e2e2e2
+    .skeleton-menu-content
+      margin-top: 20px
+      height: 200px
+      width: 100%
+      background-color: #e2e2e2
+.reviews
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 10px
+  margin-bottom: 20px
+  .review-card
+    background-color: white
+    padding: 30px
+    text-align: center
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+    font-size: 13pt
+    word-break: break-word
+  .skeleton-review-card
+    height: 250px
+    background-color: white
+    padding: 30px
+    text-align: center
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+    div
+      padding: 0
+      box-shadow: none
+      margin: 0 auto
+    .skeleton-review-name
+      width: 50%
+      height: 40px
+      background-color: #e2e2e2
+      margin-bottom: 30px
+    .skeleton-review-content
+      width: 100%
+      height: 125px
+      background-color: #e2e2e2
+      margin-bottom: 15px 
+    .skeleton-review-date
+      width: 30%
+      height: 25px
+      background-color: #e2e2e2
+.like
+    font-size: 18px
+    position: fixed
+    bottom: 16px
+    right: 16px
+    background-color: #BA262B
+    color: white
+    border: 0
+    border-radius: 50%
+    width: 55px
+    height: 55px
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+#review-add-card 
+  display: flex
+  justify-content: center
+  align-items: center
+  button
+    padding: 15px 40px
+    background-color: rgb(214, 80, 22)
+    text-decoration: none
+    color: white
+    font-size: 16px
+    border-radius: 10px
+    border: 0
+    &:hover
+      background-color: rgb(190, 73, 22)
+#form-review
+  background-color: white
+  padding: 15px 30px
+  h2
+    padding-left: 20px
+  form
+    .form-group
+      display: grid
+      grid-template-rows: repeat(2, 1fr)
+      input
+        height: 30px
+        padding-left: 10px
+        border-radius: 10px
+        border: 2px solid rgb(194, 193, 193)
+        &:focus
+          border-radius: 10px
+          border: 2px solid rgb(190, 73, 22)
+  div
+    margin-bottom: 20px
+.skeleton-form-review
+  background-color: white
+  padding: 15px 30px
+  form
+    .skeleton-form-group
+      display: grid
+      grid-template-rows: repeat(2, 1fr)
+      margin-bottom: 20px
+      .skeleton-label
+        width: 20%
+        height: 40px
+        background-color: #e2e2e2
+      .skeleton-input
+        width: 100%
+        height: 50px
+        background-color: #e2e2e2
+    .skeleton-button-container
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      width: 50%
+      margin: 0 auto
+      div
+        background-color: #e2e2e2
+        height: 70px
+        margin-right: 20px
+.handler
+  background-color: white
+  padding: 30px
+  text-align: center
+  .image-handler
+    img
+      width: 20%
+  .caption-handler
+    font-size: 16px
