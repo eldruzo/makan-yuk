@@ -172,7 +172,7 @@ class AppListItemDetail extends HTMLElement {
 
   renderReviews() {
     let ShowReviews = '';
-    const getReviewsData = this._restaurant.consumerReviews;
+    const getReviewsData = this._restaurant.customerReviews;
     getReviewsData.forEach((review) => {
       ShowReviews += `
                 <div class="review-card">
